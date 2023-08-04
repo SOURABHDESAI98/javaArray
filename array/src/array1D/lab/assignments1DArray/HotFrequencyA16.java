@@ -8,7 +8,7 @@ public class HotFrequencyA16 {
 
 		System.out.println("Frequency of elements");
 
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < a.length - 1; i++) {
 
 			count = 1; // Frequency \of each element will be at least 1
 

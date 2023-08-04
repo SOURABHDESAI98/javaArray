@@ -5,13 +5,11 @@ public class HotDuplicateElemAssignment13 {
 	public static void findDuplicate(int a[]) {
 
 		int count;
-		boolean flag;
 
 		System.out.println("Duplicate elements :");
 
 		for (int i = 0; i < a.length; i++) {
 
-			flag = false;
 			count = 0;
 
 			if (a[i] == -1) {
@@ -21,14 +19,14 @@ public class HotDuplicateElemAssignment13 {
 			for (int j = i + 1; j < a.length; j++) {
 
 				if (a[i] == a[j]) {
-					flag = true;
+
 					count++;
 					a[j] = -1;
 				}
 
 			}
 
-			if (flag) {
+			if (count > 0) {
 				System.out.println(a[i] + " appeared " + count + " times");
 			}
 

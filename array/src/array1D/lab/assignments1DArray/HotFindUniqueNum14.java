@@ -5,13 +5,11 @@ public class HotFindUniqueNum14 {
 	public static void findUniqueNum(int a[]) {
 
 		int count;
-		boolean flag;
 
 		System.out.println("Unique elements are :");
 
 		for (int i = 0; i < a.length; i++) {
 
-			flag = true;
 			count = 0;
 
 			if (a[i] == -1) {
@@ -21,14 +19,14 @@ public class HotFindUniqueNum14 {
 			for (int j = i + 1; j < a.length; j++) {
 
 				if (a[i] == a[j]) {
-					flag = false;
+
 					count++;
 					a[j] = -1;
 				}
 
 			}
 
-			if (flag) {
+			if (count == 0) {
 				System.out.println(a[i]);
 			}
 
